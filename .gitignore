@@ -16,3 +16,20 @@
 /tmp
 /config/database.yml
 
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/vendor/bundle
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
+doc/
+
+/nbproject/*
+.idea/*
+.rvmrc
