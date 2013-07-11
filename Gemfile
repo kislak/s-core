@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'slim-rails'
+gem 'zurb-foundation'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
