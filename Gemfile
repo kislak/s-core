@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'slim-rails'
 gem 'zurb-foundation'
+gem 'simple_form'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
