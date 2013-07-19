@@ -18,4 +18,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'vcr'
   gem 'webmock', '< 1.12'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner', '1.0.0.RC1'
 end
