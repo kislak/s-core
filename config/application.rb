@@ -29,5 +29,7 @@ module Goodcode
       g.helper = false
       g.view_specs = false
     end
+
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end

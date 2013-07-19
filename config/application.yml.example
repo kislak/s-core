@@ -1,0 +1,11 @@
+defaults: &defaults
+  stripe_api_key: sk_test_7F3CstkkrabJyg8dToyffi0D
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
