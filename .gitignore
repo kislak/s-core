@@ -33,3 +33,5 @@ doc/
 /nbproject/*
 .idea/*
 .rvmrc
+/config/application.yml
+
