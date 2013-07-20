@@ -1,4 +1,4 @@
-require 'spec_helper'
+#require 'spec_helper'
 
 describe 'validate FactoryGirl factories' do
   FactoryGirl.factories.each do |factory|
