@@ -20,6 +20,7 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock', '< 1.12'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'shoulda-matchers'
   gem 'database_cleaner', '1.0.0.RC1'
   gem 'mailcatcher'

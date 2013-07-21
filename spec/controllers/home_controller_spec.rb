@@ -11,6 +11,7 @@ describe HomeController do
 
   describe "GET 'main'" do
     it "returns http success" do
+      sign_in FactoryGirl.create(:user)
       get 'main'
       response.should be_success
     end
