@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'inherited_resources'
 gem 'stripe'
 gem 'settingslogic'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
@@ -21,4 +22,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner', '1.0.0.RC1'
+  gem 'mailcatcher'
 end
