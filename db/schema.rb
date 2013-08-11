@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130811154017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "plans", force: true do |t|
+    t.string   "interval"
+    t.string   "name"
+    t.decimal  "amout",             precision: 10, scale: 2
+    t.string   "currency"
+    t.string   "stripe_id"
+    t.integer  "interval_count"
+    t.integer  "trial_period_days"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
