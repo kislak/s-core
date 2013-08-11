@@ -3,7 +3,7 @@ class CreatePlans < ActiveRecord::Migration
     create_table :plans do |t|
       t.string :interval
       t.string :name
-      t.decimal :amout, :scale => 2, :precision => 10
+      t.decimal :amount, :scale => 2, :precision => 10
       t.string :currency
       t.string :stripe_id
       t.integer :interval_count

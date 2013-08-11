@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130811154017) do
   create_table "plans", force: true do |t|
     t.string   "interval"
     t.string   "name"
-    t.decimal  "amout",             precision: 10, scale: 2
+    t.decimal  "amount",            precision: 10, scale: 2
     t.string   "currency"
     t.string   "stripe_id"
     t.integer  "interval_count"

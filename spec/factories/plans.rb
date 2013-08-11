@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :plan do
     interval "MyString"
     name "MyString"
-    amout "9.99"
+    amount "9.99"
     currency "MyString"
     stripe_id "MyString"
     interval_count 1
