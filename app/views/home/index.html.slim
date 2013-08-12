@@ -1,0 +1,6 @@
+.row
+  - plans.each do |plan|
+    .large-4.columns
+      ul.pricing-table
+        li.title = plan.name
+        li.price = number_to_currency plan.amount

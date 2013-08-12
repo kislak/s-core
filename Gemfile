@@ -21,4 +21,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner', '1.0.0.RC1'
+  gem 'capybara'
+
+  # opens page in the capybara tests with save_and_open method
+  gem 'launchy'
 end
