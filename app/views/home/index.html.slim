@@ -1,6 +1,7 @@
 .row
+  - columns = columns_width(plans)
   - plans.each do |plan|
-    .large-4.columns
+    div class="large-#{columns} columns"
       ul.pricing-table
         li.title = plan.name
         li.price = number_to_currency plan.amount
