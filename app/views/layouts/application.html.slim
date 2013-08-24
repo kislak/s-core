@@ -26,8 +26,25 @@ head
   = csrf_meta_tag
 
 body
-  .flash
+  nav.top-bar.home-border data-options='is_hover:false'
+    sections.top-bar-section
+      ul.left
+        li= link_to 's-core', root_path
+    section.top-bar-section
+      ul.right
+        - if current_user
+          li.has-dropdown
+            = link_to current_user.email
+            ul.dropdown
+              li= link_to 'Edit Profile', edit_user_registration_path
+              li= link_to 'Logout', destroy_user_session_path, method: :delete
+        - else
+          li= link_to 'Sign up', new_user_registration_path
+          li= link_to 'Login', new_user_session_path
+
+  .container.flash
     p.notice= notice
     p.alert= alert
-  .container
+
+  .container.main
     == yield
