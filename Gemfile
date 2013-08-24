@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'inherited_resources'
 gem 'stripe'
 gem 'settingslogic'
+gem 'devise'
 
 group :test do
   gem 'rspec-rails', '~> 2.0'
@@ -25,4 +26,8 @@ group :test do
 
   # opens page in the capybara tests with save_and_open method
   gem 'launchy'
+end
+
+group :development do
+  gem 'mailcatcher'
 end

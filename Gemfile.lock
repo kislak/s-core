@@ -28,6 +28,7 @@ GEM
     addressable (2.3.5)
     arel (4.0.0)
     atomic (1.1.12)
+    bcrypt-ruby (3.1.1)
     builder (3.1.4)
     capybara (2.0.3)
       mime-types (>= 1.16)
@@ -47,9 +48,16 @@ GEM
     coffee-script-source (1.6.3)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
+    daemons (1.1.9)
     database_cleaner (1.0.0.RC1)
+    devise (3.0.0)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.2.0)
@@ -58,6 +66,8 @@ GEM
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
     ffi (1.9.0)
+    haml (4.0.3)
+      tilt
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -69,18 +79,32 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    json (1.8.0)
     launchy (2.2.0)
       addressable (~> 2.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailcatcher (0.2.4)
+      eventmachine
+      haml
+      i18n
+      json
+      mail
+      sinatra
+      skinny (>= 0.1.2)
+      sqlite3-ruby
+      thin
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.8)
     nokogiri (1.5.10)
+    orm_adapter (0.4.0)
     pg (0.16.0)
     polyglot (0.3.3)
     rack (1.5.2)
+    rack-protection (1.5.0)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.0)
@@ -128,6 +152,13 @@ GEM
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
     simple_form (1.4.1)
+    sinatra (1.4.3)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    skinny (0.2.3)
+      eventmachine (~> 1.0.0)
+      thin (~> 1.5.0)
     slim (2.0.1)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -145,10 +176,17 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sqlite3 (1.3.7)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
     stripe (1.8.4)
       multi_json (>= 1.0.4, < 2)
       rest-client (~> 1.4)
     temple (0.6.6)
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.18.1)
     thread_safe (0.1.2)
       atomic
@@ -163,6 +201,8 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     vcr (2.5.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
@@ -179,10 +219,12 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner (= 1.0.0.RC1)
+  devise
   factory_girl_rails
   inherited_resources
   jquery-rails
   launchy
+  mailcatcher
   pg
   rails (= 4.0.0)
   rspec-rails (~> 2.0)
